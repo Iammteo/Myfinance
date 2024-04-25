@@ -12,12 +12,12 @@ const Dashboard = () => {
 
      <section className="flex">
        
-        <div className="w-2/3 h-full rounded-bl-3xl bg-white p-8">
+        <div className=" w-full sm:md:lg:w-2/3 h-full rounded-bl-3xl bg-white p-6 sm:md:p-8">
             <Trio/>  
             <Statictics/>
             <Charts/>
         </div>
-        <div className="w-1/3 h-full hidden sm:md:block bg-red-500 p-6 ">
+        <div className=" sm:md:lg:w-1/3 sm:md:lg:h-full hidden sm:md:lg:block bg-white sm:md:lg:p-6 ">
            <Container/>
         </div>
          
