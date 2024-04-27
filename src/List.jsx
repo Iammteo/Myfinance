@@ -2,14 +2,10 @@ import { FaTaxi } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { RiNetflixFill } from "react-icons/ri";
 
- 
-
-
- 
 
 const Items = ({svg , title , time , amount }) => {
     return (
-    <div>
+    <div className="">
          <div className="py-4 flex justify-between ">
               <div className="gap-5 flex ">
                     <div className="bg-white w-10 h-8 p-2 flex justify-center rounded-md text-[#FF0000]">{svg}</div>
