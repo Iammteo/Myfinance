@@ -54,14 +54,7 @@ const Dashboard = () => {
         <CiCreditCard1 />
       </button>
     </div>
-         {/* <div className="lg:md:hidden flex justify-center ">
-               <button className='text-white bg-blue-500 p-3 rounded-md' onClick={handleToggleComponent1}>
-               component 1   
-               </button>
-               <button className='text-white bg-green-500 p-3 rounded-md' onClick={handleToggleComponent2}>
-               Component 2
-               </button>
-         </div> */}
+        
 
       <section className="flex flex-col lg:md:flex-row">
          {

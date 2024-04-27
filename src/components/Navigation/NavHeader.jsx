@@ -1,4 +1,4 @@
-import Logo from "../Logo";
+
 import SearchBar from "../SearchBar";
 import { IoIosNotifications } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
