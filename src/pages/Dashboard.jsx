@@ -8,55 +8,46 @@ import Container from "../components/Container";
 import { VscGraph } from "react-icons/vsc";
 import { CiCreditCard1 } from "react-icons/ci";
 
+
 const Dashboard = () => {
-
-   useEffect(() => {
-      console.log(showComponent)
-   })
-
    const [showComponent, setShowComponent] = useState(false);
-   const [component1Active, setComponent1Active] = useState(false);
-   const [component2Active, setComponent2Active] = useState(false);
 
+   const handleToggleComponent1 = () => {
+      setShowComponent(true);
+   };
 
+   const handleToggleComponent2 = () => {
+      setShowComponent(false);
+   };
 
-  const handleToggleComponent1 = () => {
-    setShowComponent(true);
-   
-  };
-
-  const handleToggleComponent2 = () => {
-    setShowComponent(false);
-   
-  };
-
-    return( 
-    <div className="w-full bg-white lg:md:rounded-l-3xl lg:md:ml-20 p-5" >
-        
+   return( 
+      <div className="w-full bg-white lg:md:rounded-l-3xl lg:md:ml-20 p-5" >
+       
          <NavHeader/>
 
-         <div className="lg:md:hidden flex justify-center p-3  w-full   ">
-      <button
-        className={`p-3 rounded-md shadow-lg w-[4rem] h-10 text-2xl ${
-          component1Active ? 'text-white bg-blue-500 ' : 'text-blue-500  bg-white'
-        }`}
-        onClick={handleToggleComponent1} 
-        
-      >
-        <VscGraph />
-      </button>
-      <button
-        className={`p-3 rounded-md shadow-lg w-[4rem] h-10 text-2xl ${
-          component2Active ? 'text-white bg-blue-500' : 'text-white  bg-blue-500'
-        }`}
-        onClick={handleToggleComponent2}
-      >
-        <CiCreditCard1 />
-      </button>
-    </div>
+         <div className="lg:md:hidden flex justify-center p-3 w-full">
+            <button
+               className={`p-3 rounded-md shadow-lg w-[4rem] h-10 text-2xl ${
+                  showComponent ? 'text-white bg-blue-500' : 'text-blue-500 bg-white'
+               }`}
+               onClick={handleToggleComponent1} 
+            >
+               <VscGraph />
+            </button>
+            <button
+               className={`p-3 rounded-md shadow-lg w-[4rem] h-10 text-2xl ${
+                  !showComponent ? 'text-white bg-blue-500' : 'text-blue-500 bg-white'
+               }`}
+               onClick={handleToggleComponent2}
+            >
+               <CiCreditCard1 />
+            </button>
+         </div>
         
 
-      <section className="flex flex-col lg:md:flex-row">
+           
+
+      <section className="flex flex-col lg:md:flex-row mb-[4rem]">
          {
             showComponent ? (
                <div className=" w-full sm:md:lg:w-2/3 h-full rounded-bl-3xl  bg-white  p-6 md:lg:hidden md:lg:p-4 sm:md:p-8">
@@ -83,8 +74,13 @@ const Dashboard = () => {
             
             
       </section>
-         
-   
-    </div>
-   )}
+
+
+      </div>
+   );
+}
+
 export default Dashboard;
+
+
+
